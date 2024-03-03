@@ -126,16 +126,20 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJN-th-c5K" userLabel="Timer View">
                                         <rect key="frame" x="0.0" y="391.5" width="288" height="156.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w3O-Ok-3cG">
-                                                <rect key="frame" x="144" y="78" width="0.0" height="0.0"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="BUy-tf-mry">
+                                                <rect key="frame" x="0.0" y="77.5" width="288" height="2.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="5" id="Xuh-Ax-U42"/>
+                                                </constraints>
+                                                <color key="progressTintColor" red="0.99215686270000003" green="0.74901960779999999" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="trackTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </progressView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="w3O-Ok-3cG" firstAttribute="centerY" secondItem="nJN-th-c5K" secondAttribute="centerY" id="iZe-wL-gbc"/>
-                                            <constraint firstItem="w3O-Ok-3cG" firstAttribute="centerX" secondItem="nJN-th-c5K" secondAttribute="centerX" id="ikR-QJ-Hxv"/>
+                                            <constraint firstAttribute="trailing" secondItem="BUy-tf-mry" secondAttribute="trailing" id="CpS-p8-5Fh"/>
+                                            <constraint firstItem="BUy-tf-mry" firstAttribute="centerY" secondItem="nJN-th-c5K" secondAttribute="centerY" id="FFs-qc-N7o"/>
+                                            <constraint firstItem="BUy-tf-mry" firstAttribute="centerX" secondItem="nJN-th-c5K" secondAttribute="centerX" id="SzH-xx-QbN"/>
+                                            <constraint firstItem="BUy-tf-mry" firstAttribute="leading" secondItem="nJN-th-c5K" secondAttribute="leading" id="ybL-eE-Y0X"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -151,12 +155,13 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="countdownLabel" destination="w3O-Ok-3cG" id="Olq-EH-qu7"/>
+                        <outlet property="progressLabel" destination="BUy-tf-mry" id="HiJ-nt-M8g"/>
+                        <outlet property="titleLabel" destination="XLm-5r-pSP" id="n9m-Je-kz9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+            <point key="canvasLocation" x="136.875" y="137.32394366197184"/>
         </scene>
     </scenes>
     <resources>
